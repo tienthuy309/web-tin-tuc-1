@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
 body {
@@ -45,13 +45,13 @@ body {
 .header-right {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 12px;
 }
 
 .btn-crawler, .btn-back {
     background: #008837;
     color: white;
-    padding: 8px 14px;
+    padding: 7px 12px;
     text-decoration: none;
     border-radius: 4px;
     font-size: 13px;
@@ -67,14 +67,26 @@ body {
 
 .search-box input {
     border: none;
-    padding: 6px 12px;
+    padding: 6px 10px;
     outline: none;
+    font-size: 13px;
 }
 
 .search-box button {
     border: none;
     background: #fff;
-    padding: 6px 10px;
+    padding: 6px 8px;
+    cursor: pointer;
+}
+
+.mobile-toggle {
+    display: none;
+    background: #008837;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    font-size: 18px;
+    border-radius: 4px;
     cursor: pointer;
 }
 
@@ -85,8 +97,11 @@ body {
 
 .nav-menu {
     display: flex;
-    overflow-x: auto;
-    white-space: nowrap;
+    flex-wrap: wrap;
+}
+
+.nav-item-dropdown {
+    position: relative;
 }
 
 .nav-menu a {
@@ -95,31 +110,26 @@ body {
     padding: 10px 14px;
     font-size: 14px;
     font-weight: 600;
+    display: block;
 }
 
 .nav-menu a:hover, .nav-menu a.active {
     background: #006629;
 }
 
-/* Submenu Dropdown */
-.nav-item-dropdown {
-    position: relative;
-    display: inline-block;
-}
-
+/* Sub-menu tiểu mục */
 .dropdown-content {
     display: none;
     position: absolute;
     background-color: #ffffff;
     min-width: 180px;
-    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.15);
     z-index: 100;
 }
 
 .dropdown-content a {
     color: #333 !important;
     padding: 10px 14px;
-    display: block;
     border-bottom: 1px solid #eee;
 }
 
@@ -147,7 +157,7 @@ body {
     flex: 1;
 }
 
-/* Top Section Đề bài: 1 lớn bên trái, 2 nhỏ bên phải */
+/* Top Section (1 lớn bên trái, 2 nhỏ bên phải) */
 .top-section {
     display: flex;
     gap: 20px;
@@ -247,7 +257,7 @@ body {
     color: #888;
 }
 
-/* Sidebar Widget */
+/* Sidebar */
 .widget {
     background: #fff;
     padding: 15px;
@@ -276,13 +286,12 @@ body {
     font-size: 14px;
 }
 
-/* Trang Chi tiết */
-.detail-container {
+/* Detail & Crawler */
+.detail-container, .crawler-container {
     background: #fff;
     padding: 30px;
     margin-top: 20px;
     border-radius: 8px;
-    max-width: 850px;
 }
 
 .article-title {
@@ -302,16 +311,10 @@ body {
     margin-bottom: 20px;
 }
 
-.article-body p {
-    margin-bottom: 15px;
-}
-
-/* Trang Crawler */
-.crawler-container {
-    background: #fff;
-    padding: 30px;
-    margin-top: 20px;
-    border-radius: 8px;
+.article-body img {
+    max-width: 100%;
+    border-radius: 6px;
+    margin: 15px 0;
 }
 
 .crawler-form {
@@ -345,7 +348,7 @@ body {
     overflow-x: auto;
 }
 
-/* Footer Responsive Đa Cột */
+/* Footer Responsive */
 .footer {
     background: #111;
     color: #ccc;
@@ -362,7 +365,6 @@ body {
 .footer-col h4 {
     color: #008837;
     margin-bottom: 12px;
-    font-size: 15px;
 }
 
 .footer-col ul {
@@ -382,8 +384,27 @@ body {
     margin-bottom: 8px;
 }
 
-/* RESPONSIVE TABLET & MOBILE */
 @media (max-width: 768px) {
+    .mobile-toggle {
+        display: block;
+    }
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+    .nav-menu.show {
+        display: flex;
+    }
+    .dropdown-content {
+        position: static;
+        box-shadow: none;
+        background: #006629;
+    }
+    .dropdown-content a {
+        color: white !important;
+        padding-left: 25px;
+    }
     .main-layout {
         flex-direction: column;
     }
