@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Báo điện tử Dân trí - Tin tức cập nhật liên tục 24/7</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container header-top">
+            <div class="logo">
+                <a href="index.html">Dân trí<span>.com.vn</span></a>
+            </div>
+            <div class="header-right">
+                <a href="crawler.html" class="btn-crawler">⚡ Công cụ Crawler Tin Tức</a>
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="Tìm kiếm tin tức...">
+                    <button id="searchBtn">🔍</button>
+                </div>
+            </div>
+        </div>
+        <!-- Navbar render động từ JSON / LocalStorage -->
+        <nav class="navbar">
+            <div class="container nav-menu" id="navMenu">
+                <!-- Javascript sẽ tự động điền danh mục ở đây -->
+            </div>
+        </nav>
+    </header>
+
+    <main class="container main-layout">
+        <section class="content-left">
+            <!-- Top Section (1 bài lớn bên trái, 2 bài nhỏ bên phải) -->
+            <div class="top-section" id="topSection">
+                <!-- Javascript Render -->
+            </div>
+
+            <!-- Danh sách bài viết còn lại -->
+            <div class="news-list-wrap">
+                <h3 class="section-title">DANH SÁCH BÀI VIẾT</h3>
+                <div class="news-list" id="newsList">
+                    <!-- Javascript Render dạng danh sách dọc -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Sidebar -->
+        <aside class="sidebar-right">
+            <div class="widget">
+                <h3 class="widget-title">ĐỌC NHIỀU NHẤT</h3>
+                <ol class="most-read-list" id="mostReadList">
+                    <!-- Sidebar list -->
+                </ol>
+            </div>
+        </aside>
+    </main>
+
+    <!-- Footer Responsive Đa Cột -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <h4>BÁO ĐIỆN TỬ DÂN TRÍ</h4>
+                <p>Cơ quan của Bộ Lao động - Thương binh và Xã hội. Thường trực cung cấp tin tức Việt Nam & Thế giới nóng nhất 24/7.</p>
+                <p class="copyright-text">© 2026 Bản quyền thuộc về Báo điện tử Dân trí.</p>
+            </div>
+            <div class="footer-col">
+                <h4>LIÊN KẾT NHANH</h4>
+                <ul>
+                    <li><a href="index.html">Trang chủ</a></li>
+                    <li><a href="crawler.html">Trang Crawler</a></li>
+                    <li><a href="#">Tin mới nhất</a></li>
+                    <li><a href="#">Liên hệ tòa soạn</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>CHUYÊN MỤC CHÍNH</h4>
+                <ul>
+                    <li><a href="#">Thời sự</a></li>
+                    <li><a href="#">Thế giới</a></li>
+                    <li><a href="#">Bất động sản</a></li>
+                    <li><a href="#">Kinh doanh</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>THÔNG TIN LIÊN HỆ</h4>
+                <p>📧 Email: toasoan@dantri.com.vn</p>
+                <p>📍 Địa chỉ: Số 2 Giảng Võ, Đống Đa, Hà Nội</p>
+                <div class="social-icons">
+                    <span>📘 Facebook</span> | <span>🔴 YouTube</span> | <span>🎵 TikTok</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
