@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Công cụ Crawler Tin Tức - Dân Trí</title>
+    <title>Crawler Tin Tức - Dân trí</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -12,22 +12,22 @@
             <div class="logo">
                 <a href="index.html">Dân trí<span>.com.vn</span></a>
             </div>
-            <a href="index.html" class="btn-back">⬅ Về Trang chủ</a>
+            <a href="index.html" class="btn-back">⬅ Trang chủ</a>
         </div>
     </header>
 
     <main class="container crawler-container">
-        <h2>🛠️ Công cụ Crawler & Bóc Tách Bài Viết Dân Trí</h2>
-        <p>Nhập URL bài viết từ website (Ví dụ: <code>https://dantri.com.vn/bat-dong-san/ha-noi-tinh-co-che-boi-thuong-dat-dac-biet-cho-7-du-an-duong-sat-20260928122246655.htm</code>)</p>
+        <h2>🛠️ Công cụ Crawler Bài Viết Từ URL Dân Trí</h2>
+        <p>Nhập bất kỳ đường dẫn bài viết Dân trí nào để tự động bóc tách dữ liệu JSON & hình ảnh bài viết:</p>
         
         <div class="crawler-form">
-            <input type="text" id="crawlUrlInput" placeholder="Nhập đường dẫn URL bài viết tại đây...">
-            <button id="crawlBtn">Crawl Dữ Liệu & Lưu LocalStorage</button>
+            <input type="text" id="crawlUrlInput" placeholder="Ví dụ: https://dantri.com.vn/thoi-su/chinh-tri.htm">
+            <button id="crawlBtn">Bóc tách & Lưu vào LocalStorage</button>
         </div>
 
         <div class="result-box">
-            <h3>Kết quả Object JSON Chuẩn Hóa:</h3>
-            <pre id="jsonResult">// Kết quả JSON sau khi trích xuất sẽ hiển thị tại đây...</pre>
+            <h3>Object JSON Dữ Liệu Thu Thập Được:</h3>
+            <pre id="jsonResult">// Dữ liệu bóc tách sẽ hiển thị ở đây...</pre>
         </div>
     </main>
 
